@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'difficulty.dart'; // Import DifficultyScreen
+import 'difficulty.dart';
 
 class LobbyScreen extends StatelessWidget {
   const LobbyScreen({super.key});
@@ -25,7 +25,7 @@ class LobbyScreen extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                shape: const CircleBorder(), 
+                shape: const CircleBorder(),
                 backgroundColor: const Color.fromARGB(255, 120, 179, 255),
                 padding: const EdgeInsets.all(40),
               ),

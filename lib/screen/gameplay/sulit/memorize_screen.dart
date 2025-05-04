@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:stroke_text/stroke_text.dart';
 import 'dart:async';
 import 'dart:math';
-import 'package:fish_flash/data/hewan_data.dart'; // Import the hewan data
-import 'result.dart'; // Import the result page
+import 'package:fish_flash/data/hewan_data.dart';
+import 'result.dart';
 
 class MemorizeWidget extends StatefulWidget {
   const MemorizeWidget({super.key});
@@ -83,7 +83,7 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
   }
 
   void _checkAnswer(int selectedOption) {
-    if (_isAnswered) return; // Prevent multiple answers
+    if (_isAnswered) return;
     setState(() {
       _selectedOption = selectedOption;
       _isAnswered = true;
@@ -99,7 +99,6 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
         _showImagesWithCircle = true;
       });
 
-      // Navigate to result page after 3 seconds
       Future.delayed(const Duration(seconds: 3), () {
         Navigator.push(
           context,
@@ -141,8 +140,8 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
               : _showPertanyaanImage
                   ? Center(
                       child: SizedBox(
-                        width: 700, // Set the desired width
-                        height: 300, // Set the desired height
+                        width: 700,
+                        height: 300,
                         child: Image.asset('assets/pertanyaan.png'),
                       ),
                     )
@@ -158,7 +157,7 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
                               ),
                             ),
                             const SizedBox(height: 20),
-                            SizedBox( // container 2
+                            SizedBox(
                               width: 450,
                               height: 120,
                               child: Center(
@@ -187,12 +186,12 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
                                                   ? const Color.fromARGB(255, 120, 179, 255)
                                                   : const Color(0xFFFF9595))
                                               : Colors.transparent,
-                                          width: 10, // Set the border thickness here
+                                          width: 10,
                                         ),
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(8.0), // Space between border and button
+                                        padding: const EdgeInsets.all(8.0),
                                         child: Container(
                                           width: 200,
                                           height: 200,
@@ -219,7 +218,7 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
                                 }).toList(),
                               ),
                             ),
-                            const SizedBox(height: 20), 
+                            const SizedBox(height: 20),
                             SizedBox(
                               width: 200,
                               height: 100,
@@ -253,7 +252,7 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20), 
+                const SizedBox(height: 20),
                 SizedBox(
                   width: 1200,
                   height: 600,
@@ -273,11 +272,11 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
 
     if (_imageDetails.isEmpty) {
       for (int i = 0; i < 15; i++) {
-        final hewan = hewanFigures[random.nextInt(min(10, hewanFigures.length))]; // Range random dari 1-10 atau panjang daftar
+        final hewan = hewanFigures[random.nextInt(min(10, hewanFigures.length))];
         final image = hewan['image']!;
         final name = hewan['name']!;
         if (i == 0) {
-          _randomHewanName = name; // Set random nama ikan buat soal
+          _randomHewanName = name;
         }
         double left, top;
         Rect newRect;
@@ -298,7 +297,6 @@ class _MemorizeWidgetState extends State<MemorizeWidget> {
           'rotationAngle': rotationAngle,
         });
 
-        // Count the number of each animal
         if (_imageCounts.containsKey(name)) {
           _imageCounts[name] = _imageCounts[name]! + 1;
         } else {

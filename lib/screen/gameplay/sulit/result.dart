@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fish_flash/data/hewan_data.dart'; // Import the hewan data
-import 'package:stroke_text/stroke_text.dart'; // Import the stroke text package
-import 'package:fish_flash/screen/lobby_screen.dart'; // Import the lobby screen
-import 'package:fish_flash/screen/gameplay/sulit/sulit.dart'; // Import the mudah screen
+import 'package:fish_flash/data/hewan_data.dart';
+import 'package:stroke_text/stroke_text.dart';
+import 'package:fish_flash/screen/lobby_screen.dart'; 
+import 'package:fish_flash/screen/gameplay/sulit/sulit.dart';
 
 class ResultPage extends StatelessWidget {
   final String hewanName;
@@ -20,7 +20,6 @@ class ResultPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background image
           Positioned.fill(
             child: Image.asset(
               'assets/bg.png',
@@ -36,8 +35,7 @@ class ResultPage extends StatelessWidget {
                   width: 200,
                 ),
                 const SizedBox(height: 20),
-                // Container
-                Container( // yang ini
+                Container(
                   width: 600,
                   height: 410,
                   decoration: BoxDecoration(
@@ -58,7 +56,6 @@ class ResultPage extends StatelessWidget {
                             Image.asset(
                               resultImagePath,
                               width: 500,
-                              // height: 100,
                             ),
                           ],
                         ),
@@ -79,19 +76,16 @@ class ResultPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      // Container 3 (blue) with "kamumenjawab.png" image
                       SizedBox(
                         width: 600,
                         height: 100,
                         child: Center(
                           child: Image.asset(
                             'assets/result/kamumenjawab.png',
-                            width: 420, // Set the desired width
-                            // height: 100,
+                            width: 420,
                           ),
                         ),
                       ),
-                      // Container 4 (yellow) with user choice
                       SizedBox(
                         width: 50,
                         height: 100,
@@ -114,7 +108,6 @@ class ResultPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                // Row with two images as buttons
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -128,7 +121,6 @@ class ResultPage extends StatelessWidget {
                       child: Image.asset(
                         'assets/kembali.png',
                         width: 250,
-                        // height: 100,
                       ),
                     ),
                     const SizedBox(width: 20),
@@ -142,7 +134,6 @@ class ResultPage extends StatelessWidget {
                       child: Image.asset(
                         'assets/mainlagi.png',
                         width: 250,
-                        // height: 100,
                       ),
                     ),
                   ],

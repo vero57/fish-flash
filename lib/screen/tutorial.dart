@@ -17,36 +17,35 @@ class TutorialScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                height: 100.0, // Atur tinggi kontainer atas
-                width: 440.0, // Atur lebar kontainer atas
+                height: 100.0,
+                width: 440.0,
                 child: const Center(
                   child: StrokeText(
                     text: 'CARA BERMAIN',
                     textStyle: TextStyle(
-                      fontSize: 50.0, // Ukuran teks lebih besar
-                      fontFamily: 'Super Bubble', // Font Super Bubble
+                      fontSize: 50.0,
+                      fontFamily: 'Super Bubble',
                       color: Colors.white
                     ),
                     strokeColor: Color.fromARGB(255, 72, 148, 247),
                     strokeWidth: 10,
-
                   )
                 ),
               ),
               Container(
-                height: 500.0, // Atur tinggi kontainer tengah
-                width: 1000.0, // Atur lebar kontainer tengah
+                height: 500.0,
+                width: 1000.0,
                 child: const Padding(
                   padding: EdgeInsets.all(20.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 20.0), // Jarak antara judul dan daftar
+                      SizedBox(height: 20.0),
                       Text(
                         '1. Awal permainan, pemain akan memasuki sesi mengingat.',
                         style: TextStyle(
-                          fontSize: 35.0, // Ukuran teks lebih besar
-                          fontFamily: 'Super Bubble', // Font Super Bubble
+                          fontSize: 35.0,
+                          fontFamily: 'Super Bubble',
                           color: Color.fromARGB(255, 0, 30, 70)
                         ),
                       ),
@@ -54,8 +53,8 @@ class TutorialScreen extends StatelessWidget {
                       Text(
                         '2. Pemain di berikan beberapa jenis hewan laut yang di acak, pemain akan di berikan beberapa detik untuk mengingat.',
                         style: TextStyle(
-                          fontSize: 35.0, // Ukuran teks lebih besar
-                          fontFamily: 'Super Bubble', // Font Super Bubble
+                          fontSize: 35.0,
+                          fontFamily: 'Super Bubble',
                           color: Color.fromARGB(255, 0, 30, 70)
                         ),
                       ),
@@ -63,8 +62,8 @@ class TutorialScreen extends StatelessWidget {
                       Text(
                         '3. Setelah sesi mengingat, pemain akan memasuki sesi pertanyaan yang berkaitan dengan ikan tadi. Pemain harus menjawab dengan tepat.',
                         style: TextStyle(
-                          fontSize: 27.0, // Ukuran teks lebih besar
-                          fontFamily: 'Super Bubble', // Font Super Bubble
+                          fontSize: 27.0,
+                          fontFamily: 'Super Bubble',
                           color: Color.fromARGB(255, 0, 30, 70)
                         ),
                       ),
@@ -72,21 +71,21 @@ class TutorialScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20.0), // Jarak antara kontainer tengah dan tombol
+              const SizedBox(height: 20.0),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
-                  padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0), // Atur ukuran tombol
+                  padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
                 ),
                 child: const Text(
                   'Keluar',
                   style: TextStyle(
-                    color: Colors.white, 
+                    color: Colors.white,
                     fontSize: 18.0,
-                    fontFamily: 'Super Bubble', // Font Super Bubble
+                    fontFamily: 'Super Bubble',
                   ),
                 ),
               ),

@@ -1,7 +1,7 @@
 import 'package:fish_flash/screen/gameplay/mudah/mudah.dart';
 import 'package:fish_flash/screen/gameplay/sulit/sulit.dart';
 import 'package:flutter/material.dart';
-import 'tutorial.dart'; // Import TutorialScreen
+import 'tutorial.dart';
 
 class DifficultyScreen extends StatelessWidget {
   const DifficultyScreen({super.key});
@@ -32,9 +32,9 @@ class DifficultyScreen extends StatelessWidget {
                     },
                     child: SizedBox(
                       height: 400.0,
-                      width: 400.0, 
+                      width: 400.0,
                       child: Center(
-                        child: Image.asset('assets/mudah.png'), 
+                        child: Image.asset('assets/mudah.png'),
                       ),
                     ),
                   ),
@@ -46,10 +46,10 @@ class DifficultyScreen extends StatelessWidget {
                     );
                     },
                     child: SizedBox(
-                      height: 400.0, 
-                      width: 400.0, 
+                      height: 400.0,
+                      width: 400.0,
                       child: Center(
-                        child: Image.asset('assets/sulit.png'), 
+                        child: Image.asset('assets/sulit.png'),
                       ),
                     ),
                   ),
@@ -70,7 +70,7 @@ class DifficultyScreen extends StatelessWidget {
                 child: const Text(
                   'CARA BERMAIN',
                   style: TextStyle(
-                    color: Colors.white, 
+                    color: Colors.white,
                     fontSize: 18.0,
                     fontFamily: 'Super Bubble'
                   ),
